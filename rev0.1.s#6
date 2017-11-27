@@ -8434,6 +8434,7 @@ should be set to ‘0’.</text>
 <text x="124.46" y="248.92" size="1.778" layer="97">i2c</text>
 <text x="127" y="215.9" size="1.778" layer="97">spi</text>
 <text x="127" y="187.96" size="1.778" layer="97">spi/i2c</text>
+<text x="147.32" y="180.34" size="1.778" layer="97">I2C address: 1101010b</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -8638,6 +8639,10 @@ should be set to ‘0’.</text>
 <wire x1="114.3" y1="162.56" x2="111.76" y2="162.56" width="0.1524" layer="91"/>
 <junction x="111.76" y="162.56"/>
 <pinref part="GND11" gate="1" pin="GND"/>
+<pinref part="U6" gate="G$1" pin="SDO/SA0"/>
+<wire x1="114.3" y1="177.8" x2="111.76" y2="177.8" width="0.1524" layer="91"/>
+<wire x1="111.76" y1="177.8" x2="111.76" y2="165.1" width="0.1524" layer="91"/>
+<junction x="111.76" y="165.1"/>
 </segment>
 <segment>
 <pinref part="U5" gate="G$1" pin="GND"/>
@@ -8787,6 +8792,11 @@ should be set to ‘0’.</text>
 <wire x1="119.38" y1="236.22" x2="109.22" y2="236.22" width="0.1524" layer="91"/>
 <label x="109.22" y="236.22" size="1.778" layer="95"/>
 </segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="SDA"/>
+<wire x1="144.78" y1="177.8" x2="152.4" y2="177.8" width="0.1524" layer="91"/>
+<label x="147.32" y="177.8" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
@@ -8800,6 +8810,11 @@ should be set to ‘0’.</text>
 <pinref part="U3" gate="G$1" pin="SCL"/>
 <wire x1="119.38" y1="238.76" x2="109.22" y2="238.76" width="0.1524" layer="91"/>
 <label x="109.22" y="238.76" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="U6" gate="G$1" pin="SCL"/>
+<wire x1="144.78" y1="175.26" x2="152.4" y2="175.26" width="0.1524" layer="91"/>
+<label x="147.32" y="175.26" size="1.778" layer="95"/>
 </segment>
 </net>
 </nets>
