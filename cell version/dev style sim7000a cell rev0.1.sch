@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.05" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -9361,6 +9361,43 @@ chip</description>
 <rectangle x1="0.9525" y1="-0.8763" x2="1.6891" y2="0.8763" layer="51"/>
 <rectangle x1="-0.3" y1="-0.7" x2="0.3" y2="0.7" layer="35"/>
 </package>
+<package name="U.FL" library_version="1">
+<wire x1="1.3" y1="0.7" x2="1.3" y2="2.1" width="0.2032" layer="21"/>
+<wire x1="1.3" y1="2.1" x2="-1.3" y2="2.1" width="0.2032" layer="21"/>
+<wire x1="-1.3" y1="-2.1" x2="1.3" y2="-2.1" width="0.2032" layer="21"/>
+<wire x1="1.3" y1="-2.1" x2="1.3" y2="-0.7" width="0.2032" layer="21"/>
+<wire x1="-1.3" y1="0.7" x2="-1.3" y2="2.1" width="0.2032" layer="21"/>
+<wire x1="-1.3" y1="-2.1" x2="-1.3" y2="-0.7" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="0.7" x2="1.4" y2="2" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="-2" x2="1.4" y2="-0.7" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="0.7" x2="1.5" y2="2.1" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="-2.1" x2="1.5" y2="-0.7" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="2.1" x2="1.3" y2="2.1" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="0.7" x2="1.3" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="-0.7" x2="1.3" y2="-0.7" width="0.2032" layer="21"/>
+<wire x1="1.5" y1="-2.1" x2="1.3" y2="-2.1" width="0.2032" layer="21"/>
+<smd name="1" x="0" y="1.375" dx="2.2" dy="1.05" layer="1"/>
+<smd name="2" x="0" y="-1.375" dx="2.2" dy="1.05" layer="1"/>
+<smd name="3" x="1.525" y="0" dx="0.8" dy="1" layer="1"/>
+<rectangle x1="-0.889" y1="-0.8255" x2="0.889" y2="0.8255" layer="41"/>
+<text x="-1.27" y="2.54" size="1.016" layer="25" ratio="18">&gt;NAME</text>
+<text x="-1.27" y="-3.175" size="0.8128" layer="27" ratio="10">&gt;VALUE</text>
+</package>
+<package name="FIDUCIAL_1MM" library_version="1">
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" stop="no" cream="no"/>
+<polygon width="0.127" layer="29">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+<polygon width="0.127" layer="41">
+<vertex x="-1" y="0" curve="90"/>
+<vertex x="0" y="-1" curve="90"/>
+<vertex x="1" y="0" curve="90"/>
+<vertex x="0" y="1" curve="90"/>
+</polygon>
+</package>
 </packages>
 <symbols>
 <symbol name="MCP73871" library_version="1">
@@ -9422,6 +9459,19 @@ chip</description>
 <text x="-3.81" y="5.08" size="1.778" layer="95">&gt;NAME</text>
 <pin name="1" x="-5.08" y="2.54" visible="off" length="short" direction="pas" swaplevel="1"/>
 <pin name="2" x="5.08" y="2.54" visible="off" length="short" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="U.FL" library_version="1">
+<wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.1359" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
+<pin name="GND@0" x="-2.54" y="-5.08" visible="off" length="short" direction="pas"/>
+<pin name="SIGNAL" x="5.08" y="0" visible="off" length="middle" direction="pas" rot="R180"/>
+<pin name="GND@1" x="-2.54" y="-7.62" visible="off" length="short" direction="pas"/>
+<text x="-2.54" y="3.302" size="1.27" layer="95">&gt;NAME</text>
+<text x="-2.54" y="-10.16" size="1.27" layer="96">&gt;VALUE</text>
+</symbol>
+<symbol name="DOT" library_version="1">
+<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -9825,6 +9875,38 @@ Source: http://www.osram.convergy.de/</description>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="ANTENNA_U.FL" prefix="X" uservalue="yes" library_version="1">
+<description>&lt;p&gt;U.FL Antenna Connector&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="U.FL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="U.FL">
+<connects>
+<connect gate="G$1" pin="GND@0" pad="1"/>
+<connect gate="G$1" pin="GND@1" pad="2"/>
+<connect gate="G$1" pin="SIGNAL" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" library_version="1">
+<description>For use by pick and place machines to calibrate the vision/machine, 1mm
+&lt;p&gt;By microbuilder.eu&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="DOT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="FIDUCIAL_1MM">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -12056,6 +12138,14 @@ W = angled&lt;p&gt;
 <part name="R16" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0402" package3d_urn="urn:adsk.eagle:package:26058/1" value="1K"/>
 <part name="SUPPLY23" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="GND8" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="X1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ANTENNA_U.FL" device=""/>
+<part name="GND41" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="X2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="ANTENNA_U.FL" device=""/>
+<part name="GND42" library="SparkFun-PowerSymbols" deviceset="GND" device=""/>
+<part name="U$1" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="FIDUCIAL" device=""/>
+<part name="U$2" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="FIDUCIAL" device=""/>
+<part name="U$3" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="FIDUCIAL" device=""/>
+<part name="U$4" library="adafruit" library_urn="urn:adsk.eagle:library:420" deviceset="FIDUCIAL" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -12191,6 +12281,14 @@ should be set to ‘0’.</text>
 <instance part="GND39" gate="1" x="177.8" y="205.74"/>
 <instance part="GND40" gate="1" x="195.58" y="200.66"/>
 <instance part="TP3" gate="G$1" x="213.36" y="231.14" rot="R270"/>
+<instance part="X1" gate="G$1" x="303.53" y="246.38" rot="MR0"/>
+<instance part="GND41" gate="1" x="308.61" y="234.95"/>
+<instance part="X2" gate="G$1" x="303.53" y="228.6" rot="MR0"/>
+<instance part="GND42" gate="1" x="307.34" y="217.17"/>
+<instance part="U$1" gate="G$1" x="411.48" y="81.28"/>
+<instance part="U$2" gate="G$1" x="411.48" y="73.66"/>
+<instance part="U$3" gate="G$1" x="411.48" y="66.04"/>
+<instance part="U$4" gate="G$1" x="411.48" y="58.42"/>
 </instances>
 <busses>
 </busses>
@@ -12473,6 +12571,26 @@ should be set to ‘0’.</text>
 <wire x1="193.04" y1="205.74" x2="195.58" y2="205.74" width="0.1524" layer="91"/>
 <wire x1="195.58" y1="205.74" x2="195.58" y2="203.2" width="0.1524" layer="91"/>
 <pinref part="GND40" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X1" gate="G$1" pin="GND@0"/>
+<wire x1="306.07" y1="241.3" x2="308.61" y2="241.3" width="0.1524" layer="91"/>
+<wire x1="308.61" y1="241.3" x2="308.61" y2="238.76" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="GND@1"/>
+<wire x1="308.61" y1="238.76" x2="308.61" y2="237.49" width="0.1524" layer="91"/>
+<wire x1="306.07" y1="238.76" x2="308.61" y2="238.76" width="0.1524" layer="91"/>
+<junction x="308.61" y="238.76"/>
+<pinref part="GND41" gate="1" pin="GND"/>
+</segment>
+<segment>
+<pinref part="X2" gate="G$1" pin="GND@0"/>
+<wire x1="306.07" y1="223.52" x2="307.34" y2="223.52" width="0.1524" layer="91"/>
+<wire x1="307.34" y1="223.52" x2="307.34" y2="220.98" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="GND@1"/>
+<wire x1="307.34" y1="220.98" x2="307.34" y2="219.71" width="0.1524" layer="91"/>
+<wire x1="306.07" y1="220.98" x2="307.34" y2="220.98" width="0.1524" layer="91"/>
+<junction x="307.34" y="220.98"/>
+<pinref part="GND42" gate="1" pin="GND"/>
 </segment>
 </net>
 <net name="USB_N" class="0">
@@ -13179,13 +13297,15 @@ should be set to ‘0’.</text>
 <net name="N$21" class="0">
 <segment>
 <pinref part="U9" gate="G$1" pin="RF_ANT"/>
-<wire x1="269.24" y1="246.38" x2="320.04" y2="246.38" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="246.38" x2="298.45" y2="246.38" width="0.1524" layer="91"/>
+<pinref part="X1" gate="G$1" pin="SIGNAL"/>
 </segment>
 </net>
 <net name="N$34" class="0">
 <segment>
 <pinref part="U9" gate="G$1" pin="GNSS_ANT"/>
-<wire x1="269.24" y1="228.6" x2="320.04" y2="228.6" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="228.6" x2="298.45" y2="228.6" width="0.1524" layer="91"/>
+<pinref part="X2" gate="G$1" pin="SIGNAL"/>
 </segment>
 </net>
 </nets>
